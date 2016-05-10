@@ -6,7 +6,10 @@ git config --global user.email "developerdizzle+travis@gmail.com"
 git config --global user.name "Travis CI"
 
 # build (CHANGE THIS)
-npm run build
+rm -rf client/dist
+mkdir -p client/dist
+
+npm run build:client
 
 # deploy
 cd client/dist

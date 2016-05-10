@@ -15,7 +15,8 @@
     "watch:css": "watch \"npm run build:css\" client/src/css",
     "build:html": "pug -O package.json client/src/html -o client/dist",
     "watch:html": "watch \"npm run build:html\" client/src/html",
-    "build": "npm run build:server & npm run build:js & npm run build:css & npm run build:html",
+    "build:client": "npm run build:js & npm run build:css & npm run build:html",
+    "build": "npm run build:server & npm run build:client",
     "watch": "npm run watch:js & npm run watch:css & npm run watch:html",
     "start": "node --harmony server/dist/app.js"
   },
