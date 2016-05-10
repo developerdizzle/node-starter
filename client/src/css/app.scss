@@ -37,11 +37,11 @@ main {
   flex-direction: row;
   justify-content: space-between;
   
-  > span {
+  > div {
     flex: 1;
   }
 
-  > code {
+  > .command {
     flex: 2;
   }
 }
