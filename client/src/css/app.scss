@@ -1,25 +1,20 @@
 @import 'material-icons.scss';
 
+html .mdl-layout__tab-bar {
+  width: 100%;
+}
+
 header {
-  padding: 0 0.5rem 1rem 0.5rem !important;
+  #title {
+    width: 100%;
+    
+    h1 {
+      margin: 0;
+    }
   
-  #hello {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  #friend {
-    text-align: right;
-  }
-  
-  #version {
-    font-style: italic;
-    text-align: right;
+    #version {
+      text-align: right;
+    }
   }
 }
 
@@ -49,9 +44,4 @@ main {
   > code {
     flex: 2;
   }
-}
-
-h1 {
-  text-transform: uppercase;
-  margin-bottom: 0;
 }
