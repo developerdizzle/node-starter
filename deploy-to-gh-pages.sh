@@ -16,4 +16,4 @@ cd client/dist
 git init
 git add .
 git commit -m "[travis] Deploy to Github Pages"
-git push --force "https://${GITHUB_TOKEN}@$github.com/developerdizzle/node-starter.git" master:gh-pages > /dev/null 2>&1
+git push --force "https://${GITHUB_TOKEN}@$github.com/developerdizzle/node-starter.git" master:gh-pages
