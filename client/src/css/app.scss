@@ -1,0 +1,57 @@
+@import 'material-icons.scss';
+
+header {
+  padding: 0 0.5rem 1rem 0.5rem !important;
+  
+  #hello {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #friend {
+    text-align: right;
+  }
+  
+  #version {
+    font-style: italic;
+    text-align: right;
+  }
+}
+
+main {
+  width: 100%;
+  
+  section {
+    width: 80%;
+    margin: 1rem auto;
+    
+    .version {
+      text-align: right;
+    }
+  }
+}
+
+.left-right {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  > span {
+    flex: 1;
+  }
+
+  > code {
+    flex: 2;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}

@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    link(rel="stylesheet",href="//fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet",href="//code.getmdl.io/1.1.3/material.min.css")
+    link(rel="stylesheet",href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet",href!="/app.css?v=" + version)
+  body
+    header.mdl-layout__header.is-casting-shadow
+      #hello
+        #again
+          h1 Hello again
+          #friend friend of a friend
+        #version= "v" + version
+
+    main.mdl-layout__content.mdl-color--grey-100.mdl-color-text--grey-600
+
+      section#engines
+        h4 Engines
+
+        ul.mdl-list.mdl-shadow--2dp
+          each ver, engine in engines
+            li.mdl-list__item
+              span.mdl-list__item-primary-content
+                i.material-icons.mdl-list__item-icon language
+                .left-right
+                  span= engine
+                  span.version= ver
+
+      section#dependencies
+        h4 Dependencies
+
+        ul.mdl-list.mdl-shadow--2dp
+          each ver, dep in dependencies
+            li.mdl-list__item
+              span.mdl-list__item-primary-content
+                i.material-icons.mdl-list__item-icon code
+                .left-right
+                  span
+                    a(href!="//www.npmjs.org/package/" + dep,target="_blank")= dep
+                    | &nbsp;
+                    img(src!="https://badge.fury.io/js/" + dep + ".svg")
+                  span.version= ver
+
+      section#devdependencies
+        h4 Dev Dependencies
+        
+        ul.mdl-list.mdl-shadow--2dp
+          each ver, dep in devDependencies
+            li.mdl-list__item
+              span.mdl-list__item-primary-content
+                i.material-icons.mdl-list__item-icon developer_mode
+                .left-right
+                  span
+                    a(href!="//www.npmjs.org/package/" + dep,target="_blank")= dep
+                    | &nbsp;
+                    img(src!="https://badge.fury.io/js/" + dep + ".svg")
+                  span.version= ver
+
+      section#scripts
+        h4 Build Scripts
+        
+        ul.mdl-list.mdl-shadow--2dp
+          each command, script in scripts
+            li.mdl-list__item
+              span.mdl-list__item-primary-content
+                i.material-icons.mdl-list__item-icon build
+                .left-right
+                  span= script
+                  code= command
+
+    script(defer,src="https://code.getmdl.io/1.1.3/material.min.js")
+    script(src!="/app.js?v=" + version)
